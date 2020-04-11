@@ -9,9 +9,29 @@ body{
     background: #e5e5e5;
     color: #25282B;
 
-    text-align: center;
+     margin: 0; /*Espaçamento*/
 
 }
+
+
+#container{
+    width: 90%;
+    max-width: 980px;
+
+    /*Alinhando o conteudo no meio da caixa com base no max-widht*/
+    margin-right:auto; 
+    margin-left: auto;
+
+    /*Posicionamento*/
+    display: flex; /*Separa os filhos*/
+}
+
+#intro{
+    width: 300px;
+}
+
+
+
 button{
     color: #ff5e84;
     border: none;
@@ -19,12 +39,18 @@ button{
     font-weight: bold; 
     background: none;      
 }
-.fat{
+
+button.fat{
     background: #ff5e84;
     color: white;
 }
 
-#footer a{
+
+#buttons, footer{
+    text-align: center;
+}
+
+footer a{
     color: #25282B;
     text-decoration: none;
 }

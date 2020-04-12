@@ -7,6 +7,8 @@ body{
     background: #e5e5e5;
     color: #25282B;
 
+    font-family: 'Montserrat', sans-serif; /*Google fonts*/
+
      margin: 0; /*Espaçamento*/
 }
 
@@ -24,6 +26,11 @@ a:hover{
     color: #ff5e84;
     font-weight: bold;
     text-decoration: underline
+}
+p, .description{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
 }
 
 #container{
@@ -59,8 +66,11 @@ button{
     color: #ff5e84;
     
     border: none;
-    
-    font-weight: bold; 
+
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
 
     cursor: pointer;
 
@@ -91,6 +101,49 @@ button.fat:hover{
 
 footer{
     text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #777;
+}
+
+
+footer a{
+    opacity: 0.7;
 }
 
 /*EDIÇÃO DA PÁGINA AO LADO*/
+.idea{
+    display: flex;
+
+    border-radius: 8px;
+    box-shadow: 0  4px 16px -8px rgba(1, 1, 1 , 0.1);
+    margin-bottom: 32px;
+
+    padding: 32px;
+
+    background-color: #FFF;
+}
+
+.idea img{
+    width: 60px;
+    height: 60px;
+
+    margin-right: 32px;
+}
+
+.ideia h3{
+    margin: 0;
+}
+
+.idea p{
+    margin: 8px 0;
+    color:#777;
+}
+
+.idea .description{
+    margin: 16px 0;
+
+}

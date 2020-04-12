@@ -8,7 +8,22 @@ body{
     color: #25282B;
 
      margin: 0; /*Espaçamento*/
+}
 
+.hide{
+    display: none;
+}
+
+a{
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: underline
 }
 
 #container{
@@ -60,9 +75,11 @@ button.fat{
     color: white;
 
     width: 150px; /*Largura do botão*/
-    height: 40px; /*Altura do botão*/
-    border-radius:  60px 0 ; /*Deixando o botão arredondado*/
-}
+    height: 40px;  /*Altura do botão*/
+    border-radius:  6px  ; /*Deixando o botão arredondado*/
+
+    box-shadow: 0px 8px 16px rgb(255, 0, 92, 0.16); /*Sombra do botão*/
+} 
 
 button.fat:hover{
     text-decoration: none;
@@ -71,11 +88,9 @@ button.fat:hover{
     text-align: center;
     
 }
-footer a{
-    color: #25282B;
-    text-decoration: none;
+
+footer{
+    text-align: center;
 }
 
-.hide{
-    display: none;
-}
+/*EDIÇÃO DA PÁGINA AO LADO*/

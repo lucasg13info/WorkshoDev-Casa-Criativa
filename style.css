@@ -277,3 +277,53 @@ form button:hover{ /*Ao passar o mouse no botão*/
    opacity: 0;
    visibility: hidden;
 }
+
+
+
+/*IDEIA.HTML*/
+#page-ideias #container{
+    display: block;
+}
+#page-ideias header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+#page-ideias nav{
+    display: flex;
+    align-items: center;
+}
+
+#page-ideias nav li{
+    list-style-type: none;
+
+    margin-right: 16px;
+}
+
+#page-ideias nav li:last-child{ /*Selecionando o ultimo item do menu e aplicando estilo*/
+    margin: 0px;
+
+}
+
+#page-ideias nav li:last-child a{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+
+    width: 150px;
+    height: 40px;
+
+    background-color: #ff5E84;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+}
+
+#page-ideias nav li:last-child a:hover{ /*Mudando para azul quando passar o mouse*/
+    background-color: #0984e3;
+}

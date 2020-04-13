@@ -12,9 +12,7 @@ body{
      margin: 0; /*Espaçamento*/
 }
 
-.hide{
-    display: none;
-}
+
 
 a{
     color: #ff5e84;
@@ -151,17 +149,17 @@ footer a{
 /*Editando o formulário*/
 
 #modal{
-    background: #ff5e84;
+    background: #ff5E84;
 
     position: absolute;
-    top:0;
+    top: 0;
 
     width: 100vw;
-    height: 100vh;
+    height: 115vh;
 
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;      
 }
 
 #modal .content{
@@ -173,7 +171,7 @@ footer a{
 #modal .content h1{
     text-align: center;
 
-    text-transform: uppercase;
+    text-transform: uppercase; /*Texto em maiúsculo*/
 }
 
 #modal form{
@@ -182,10 +180,18 @@ footer a{
 
     margin: 0 auto;
 
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
 }
 
-.input-wrapper{
-    margin: 16px 0;
+/*Deixando apenas dois elementos ao lado do outro com speudo elementos*/
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    grid-column: span 2;
 }
 
 form input,
@@ -193,32 +199,71 @@ form textarea{
     width: 100%;
 
     padding: 12px;
-    
-    border-radius: 6px;
 
-    border: 1px solid rgba(141, 25,52, 0.5);
+    box-sizing: border-box;
+    
+    border-radius: 16px; /*Arredondando a borda do Input*/
+
+    border: 1px solid rgba(141, 25, 52, 0.5);
 
     outline: none;
 
-    font-size: 16px;
+    font-size: 16px; /*Tamanho da fonte*/
 }
 
 form label{
     font-weight: 600;
-    line-height: 32px;
+    line-height: 32px; /*Espaçamdno dos inputs*/
     letter-spacing: 0.8px;
 
 }
+form a{
+    width: 150px;
+    height: 40px;
+    
+    background-color: #ffffff22;
+    color: white;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-form button{
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 16px;
+
+    align-self: end;
+
+    transition: 400ms; /*Deixando suave a alteração de cor do botão*/
+
+}
+
+form a:hover{
+    background: #fff;
+    color: #ff5e84;
+
+    text-decoration: none;
+
+}
+
+form button{ /*Botão enviar*/
     background: white;
 
     width: 150px;
     height: 40px;
 
-    border-radius: 6px;
+    border-radius: 16px;
 
     cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;
+
+    justify-self: end;
+
+    transition: 400ms; /*Deixando suave a alteração de cor do botão*/
 }
 
 form button:hover{ /*Ao passar o mouse no botão*/
@@ -226,4 +271,9 @@ form button:hover{ /*Ao passar o mouse no botão*/
     color: white;
 
     text-decoration: none;
+}
+
+#modal.hide{
+   opacity: 1;
+   visibility: hidden;
 }

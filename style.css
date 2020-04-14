@@ -74,7 +74,7 @@ p, .description{
 #intro{
     width: 300px;
 
-    margin-right: 20px; /*Espaçamento entre as divs*/
+    margin-right: 64px; /*Espaçamento entre as divs*/
 }
 
 main{

@@ -3,6 +3,7 @@ Tudo é BOX dentro do css
 E tem o conteúdo da caixa
 */
 
+/*GLOBAL*/
 body{
     background: #e5e5e5;
     color: #25282B;
@@ -34,6 +35,31 @@ p, .description{
     letter-spacing: 0.1px;
 }
 
+.button{
+    background: #ff5e84;
+    color: white;
+
+    width: 150px; /*Largura do botão*/
+    height: 40px;  /*Altura do botão*/
+    border-radius:  16px  ; /*Deixando o botão arredondado*/
+
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 8px 16px rgb(255, 0, 92, 0.16); /*Sombra do botão*/
+} 
+
+.button:hover{ /*Mudando para azul quando passar o mouse*/
+    background-color: #0984e3;
+    text-decoration: none;
+}
+
+
+/*Padrão*/
 #container{
     width: 90%;
     max-width: 980px;
@@ -81,20 +107,7 @@ button{
 button:hover{
     text-decoration: underline; /*QUando passar o mouse no botão, aparece um sublinhado.*/
 }
-button.fat{
-    background: #ff5e84;
-    color: white;
 
-    width: 150px; /*Largura do botão*/
-    height: 40px;  /*Altura do botão*/
-    border-radius:  6px  ; /*Deixando o botão arredondado*/
-
-    box-shadow: 0px 8px 16px rgb(255, 0, 92, 0.16); /*Sombra do botão*/
-} 
-
-button.fat:hover{
-    text-decoration: none;
-}
 #buttons, footer{
     text-align: center;
     
@@ -167,6 +180,11 @@ footer a{
     justify-content: center;      
 }
 
+#modal.addScroll{
+    overflow: auto;
+
+}
+
 #modal .content{
     color: white;
 }
@@ -181,7 +199,7 @@ footer a{
     width: 80%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 10%;
 
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -309,31 +327,15 @@ form button:hover{ /*Ao passar o mouse no botão*/
     color: #25282b;
 }
 
+#page-ideias li a.button{
+    color: white;
+}
+
 #page-ideias nav li:last-child{ /*Selecionando o ultimo item do menu e aplicando estilo*/
     margin: 0px;
 }
 
-#page-ideias nav li:last-child a{
-    width: 150px;
-    height: 40px;
 
-    background-color: #ff5E84;  
-    color: white;
-    
-    font-size: 14px;
-    font-weight: bold;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 16px;
-}
-
-#page-ideias nav li:last-child a:hover{ /*Mudando para azul quando passar o mouse*/
-    background-color: #0984e3;
-    text-decoration: none;
-}
 
 section#title{
     text-align: center;

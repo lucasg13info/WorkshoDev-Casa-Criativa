@@ -17,7 +17,6 @@ body.hideScroll{
     overflow: hidden;
 }
 
-
 a{
     color: #ff5e84;
     font-weight: bold;
@@ -109,8 +108,7 @@ button:hover{
 }
 
 #buttons, footer{
-    text-align: center;
-    
+    text-align: center;    
 }
 
 footer{
@@ -122,7 +120,6 @@ footer{
     letter-spacing: 0.2px;
     color: #777;
 }
-
 
 footer a{
     opacity: 0.7;
@@ -162,8 +159,8 @@ footer a{
 
 }
 
-/*Editando o formulário*/
 
+/*Editando o formulário*/
 #modal{
     background: #ff5E84;
 
@@ -173,8 +170,6 @@ footer a{
     right: 0;
     left: 0;
 
-   
-
     display: flex;
     align-items: center;
     justify-content: center;      
@@ -182,7 +177,6 @@ footer a{
 
 #modal.addScroll{
     overflow: auto;
-
 }
 
 #modal .content{
@@ -205,8 +199,8 @@ footer a{
     grid-template-columns: 1fr 1fr;
 
     gap: 20px;
-
 }
+
 
 /*Deixando apenas dois elementos ao lado do outro com speudo elementos*/
 .content form div:nth-child(3),
@@ -257,7 +251,6 @@ form a{
     align-self: end;
 
     transition: 400ms; /*Deixando suave a alteração de cor do botão*/
-
 }
 
 form a:hover{
@@ -300,17 +293,15 @@ form button:hover{ /*Ao passar o mouse no botão*/
 }
 
 
-
 /*IDEIA.HTML*/
 #page-ideias #container{
     display: block;
 }
+
 #page-ideias header{
     display: flex;
     justify-content: space-between;
-
 }
-
 
 #page-ideias nav{
     display: flex;
@@ -335,8 +326,6 @@ form button:hover{ /*Ao passar o mouse no botão*/
     margin: 0px;
 }
 
-
-
 section#title{
     text-align: center;
 }
@@ -350,7 +339,6 @@ section#title h1{
     margin: 0;
     font-size: 28px;
 }
-
 
 section#ideas{
     display:grid;

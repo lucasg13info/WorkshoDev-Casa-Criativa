@@ -1,7 +1,14 @@
-// Criando o servidor
-// Adcionar express
-
+//Usei o express para criar e configurar meu servidor
 const express = require("express")
 const server = express()
 
-server.listen(3000) //Criando uma porta para ser ouvida
+// Criei uma rota /
+//e capturo o pedido do cliente para responder
+server.get("/", function(req, res){
+    console.log("cheguei")
+    return res.send("Resposta do servidor")
+})
+
+
+// liguei meu servidor na porta 3000
+server.listen(3000)

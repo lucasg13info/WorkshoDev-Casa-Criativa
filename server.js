@@ -6,7 +6,7 @@ const server = express()
 //e capturo o pedido do cliente para responder
 server.get("/", function(req, res){
     console.log("cheguei")
-    return res.send("Resposta do servidor")
+    return res.sendFile(__dirname +"/index.html")
 })
 
 

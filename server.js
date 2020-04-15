@@ -7,10 +7,11 @@ const xicara = {
     estaSujo(simNao){
         //lógica de programação
         console.log(simNao)
+        return simNao
     }
 }
 
-console.log(xicara.cor)
+console.log(estaSujo("sim"))
 
 //Criando variaveis que são os atributos do objeto
 const cor = "preto"

@@ -10,6 +10,8 @@ const xicara = {
     }
 }
 
+console.log(xicara.cor)
+
 //Criando variaveis que são os atributos do objeto
 const cor = "preto"
 const tamanho = 5

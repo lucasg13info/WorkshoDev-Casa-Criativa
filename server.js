@@ -1,29 +1,7 @@
-// Vamos falar de coisas básicas da programação em JavaScript
+// Criando o servidor
+// Adcionar express
 
-// Criando um objeto
-const xicara = {
-    cor: "branco",
-    tamanho: 10,
-    estaSujo(simNao){
-        //lógica de programação
-        console.log(simNao)
-        return simNao
-    }
-}
+const express = require("express")
+const server = express()
 
-console.log(estaSujo("sim"))
-
-//Criando variaveis que são os atributos do objeto
-const cor = "preto"
-const tamanho = 5
-
-function sujo(esta){
-    console.log(esta)
-}
-
-//chamando atributos externos
-const xicara2 = {   
-    cor, 
-    tamanho,
-    sujo
-}
+server.listen(3000) //Criando uma porta para ser ouvida

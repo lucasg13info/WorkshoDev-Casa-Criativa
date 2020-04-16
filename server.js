@@ -18,19 +18,19 @@ const ideas = [
         url: "https://rocketseat.com.br"
     },
     {
-        img:"https://image.flaticon.com/icons/svg/2729/2729027.svgg",
+        img:"https://image.flaticon.com/icons/svg/2729/2729027.svg",
         title: "Meditação",
         category: "Mentalidade",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
         url: "https://rocketseat.com.br"
     },
     {
-        img: "https://image.flaticon.com/icons/svg/2729/2729027.svg",
+        img: "https://image.flaticon.com/icons/svg/2729/2729032.svg",
         title: "Karaokê",
         category: "Diversão",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
         url: "https://rocketseat.com.br"
-    },
+    }
 ]
 
 //configurar arquivos estáticos (css, script, imagens)
@@ -48,9 +48,10 @@ nunjucks.configure("views", {
 //e capturo o pedido do cliente para responder
 server.get("/", function(req, res){
 
-    //REGRA DE NEGÓCIO 
+    //REGRA DE NEGÓCIO
+    const reversedIdeas = [...ideas] 
     let lastIdeas = []
-    for (let idea of ideas.reverse()){// .reverse  Pega o lastIdeas e inverte a forma de visualizar 
+    for (let idea of reversedIdeas.reverse()){// .reverse  Pega o lastIdeas e inverte a forma de visualizar 
         if (lastIdeas.length < 2 ){
             lastIdeas.push(idea)
         }

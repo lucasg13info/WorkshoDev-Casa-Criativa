@@ -16,8 +16,8 @@ nunjucks.configure("views", {
 //e capturo o pedido do cliente para responder
 server.get("/", function(req, res){
 
-    const h1 = "Estou pronto"
-    return res.render("ideias.html")
+    const h1 = "OI DO BACKEND"
+    return res.render("index.html", {title:h1})
 })
 
 server.get("/ideias", function(req, res){

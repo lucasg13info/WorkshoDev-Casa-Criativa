@@ -12,12 +12,61 @@ nunjucks.configure("views", {
     noCache: true, //Quando atualizar o html ou css ele atualiza na página 
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Array (vetores)
+const latinhas = [
+    {marca: "coca-cola"}
+    {marca: "pepsi"}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Criei uma rota /
 //e capturo o pedido do cliente para responder
 server.get("/", function(req, res){
-
-    const h1 = "OI DO BACKEND"
-    return res.render("index.html", {title:h1})
+    return res.render("index.html")
 })
 
 server.get("/ideias", function(req, res){

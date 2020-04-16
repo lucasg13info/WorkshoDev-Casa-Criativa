@@ -9,18 +9,18 @@ server.use(express.static("public"))
 const nunjucks = require("nunjucks")
 nunjucks.configure("views", {
     express: server,
-    noCache: true,
+    noCache: true, //Quando atualizar o html ou css ele atualiza na página 
 })
 
 // Criei uma rota /
 //e capturo o pedido do cliente para responder
 server.get("/", function(req, res){
-    console.log("Estou pronto")
-    return res.render("index.html")
+
+    const h1 = "Estou pronto"
+    return res.render("ideias.html")
 })
 
 server.get("/ideias", function(req, res){
-    console.log("Estou pronto")
     return res.render("ideias.html")
 })
 

@@ -48,13 +48,14 @@ nunjucks.configure("views", {
 //e capturo o pedido do cliente para responder
 server.get("/", function(req, res){
 
-    const lastIdeas = []
-    for (let idea of ideas){
+    //REGRA DE NEGÓCIO 
+    let lastIdeas = []
+    for (let idea of ideas.reverse()){// .reverse  Pega o lastIdeas e inverte a forma de visualizar 
         if (lastIdeas.length < 2 ){
             lastIdeas.push(idea)
         }
     }
-
+    
     return res.render("index.html", { ideas: lastIdeas })
 })
 

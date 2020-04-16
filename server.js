@@ -9,6 +9,7 @@ server.use(express.static("public"))
 const nunjucks = require("nunjucks")
 nunjucks.configure("views", {
     express: server,
+    noCache: true,
 })
 
 // Criei uma rota /

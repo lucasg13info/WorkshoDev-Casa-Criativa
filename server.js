@@ -30,6 +30,20 @@ const ideas = [
         category: "Diversão",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
         url: "https://rocketseat.com.br"
+    },
+    {
+        img: "https://image.flaticon.com/icons/svg/2729/2729038.svg",
+        title: "Pintura",
+        category: "Criatividade",
+        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+        url: "https://rocketseat.com.br"
+    },
+    {
+        img: "https://image.flaticon.com/icons/svg/2729/2729048.svg",
+        title: "Recortes",
+        category: "Criatividade",
+        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+        url: "https://rocketseat.com.br"
     }
 ]
 
@@ -46,12 +60,13 @@ nunjucks.configure("views", {
 
 // Criei uma rota /
 //e capturo o pedido do cliente para responder
+
 server.get("/", function(req, res){
 
-    //REGRA DE NEGÓCIO
-    const reversedIdeas = [...ideas] 
+    //REGRA DE NEGÓCIO INDEX
+    const reversedIdeas = [...ideas].reverse() 
     let lastIdeas = []
-    for (let idea of reversedIdeas.reverse()){// .reverse  Pega o lastIdeas e inverte a forma de visualizar 
+    for (let idea of reversedIdeas){// .reverse  Pega o lastIdeas e inverte a forma de visualizar 
         if (lastIdeas.length < 2 ){
             lastIdeas.push(idea)
         }
@@ -60,8 +75,11 @@ server.get("/", function(req, res){
     return res.render("index.html", { ideas: lastIdeas })
 })
 
+
+//Regra de negócio pagina ideias
 server.get("/ideias", function(req, res){
-    return res.render("ideias.html", {ideas: ideas.reverse()})
+    const reversedIdeas = [...ideas].reverse() 
+    return res.render("ideias.html", {ideas: reversedIdeas})
 })
 
 

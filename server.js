@@ -60,7 +60,7 @@ server.get("/", function(req, res){
 })
 
 server.get("/ideias", function(req, res){
-    return res.render("ideias.html")
+    return res.render("ideias.html", {ideas: ideas.reverse()})
 })
 
 

@@ -43,22 +43,25 @@
 
     <section id="last-ideias"><!--Criadndo a seção  onde iremos inserir as atividades (ficara ao lado da outra seção)-->
         
+
+        <!--Estrutura de repetição dentro do HTML-->
         {% for idea in ideas %}
         <div class="idea">
-            <img src="https://image.flaticon.com/icons/svg/2729/2729007.svg" alt="Fica em casa">
+            <img src="{{idea.img}}" alt="Imagem de {{idea.title}}">
     
             <div class="content">
-                <h3>Curso de Programação</h3>
-                <p>Estudo</p>
+                <h3>{{idea.title}}</h3>
+                <p>{{idea.category}}</p>
 
                 <div class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam, voluptatem eos commodi maiores, optio perspiciatis dolore eius consequuntur similique libero.
-                    <a href="#">Ir para a Ideia</a>
+                    {{idea.description}}
+                    <a href="{{idea.url}}" target="_blanck"> Ir para a Ideia</a>
                 </div>
             </div>
         </div>
         {% endfor %}
-       
+        <!--Finalizando a estrutura de repetição -->
+
         
         
     

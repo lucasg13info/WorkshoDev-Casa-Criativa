@@ -60,7 +60,6 @@ nunjucks.configure("views", {
 
 // Criei uma rota /
 //e capturo o pedido do cliente para responder
-
 server.get("/", function(req, res){
 
     //REGRA DE NEGÓCIO INDEX
@@ -81,7 +80,6 @@ server.get("/ideias", function(req, res){
     const reversedIdeas = [...ideas].reverse() 
     return res.render("ideias.html", {ideas: reversedIdeas})
 })
-
 
 // liguei meu servidor na porta 3000
 server.listen(3000)

@@ -7,6 +7,8 @@
 ![](CasaCriativa2.JPG)
 ![](CasaCriativa3.JPG)
 
+<img src="/img/CasaCriativa3.JPG"></img>
+
 
 ## 🚀 Instalação e execução do node js
 

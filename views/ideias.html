@@ -2,15 +2,13 @@
 
 {% set bodyId = "page-ideias" %} <!--Criando a variavel bodyId-->
 
-
-{% block title %}
+{% block title %} <!--Chamando a variáel title que vem do layout.html-->
     <title>Ideias - Casa Criativa</title>
 {% endblock title %}
 
 
-{% block content %}
-    
-    <div id="container">
+{% block content %} <!--Chamando a variavel content que vem do -->
+       <div id="container">
         <header>
             <a href="/">
                 <img src="/logo.png" alt="Logo Casa Criativa" >
@@ -28,7 +26,7 @@
         
         <main>
             <section id="ideas"><!--Criadndo a seção  onde iremos inserir as atividades (ficara ao lado da outra seção)-->
-                {%include "all_Ideas.html" %}
+                {%include "all_Ideas.html" %} <!--Chamando o arquivo aa_Ideas.html-->
             </section>
         </main>
     

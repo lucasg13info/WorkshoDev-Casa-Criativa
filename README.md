@@ -3,14 +3,14 @@
 ## Workshop ministrado pela Rocketseat
 
 ## 🚀 Imagens do sistema 
-![](CasaCriativa1.jpg)
-<img src="CasaCriativa1.jpg"></img>
-<img src="CasaCriativa2.jpg"></img>
-<img src="CasaCriativa3.jpg"></img>
+![](CasaCriativa1.JPG)
+![](CasaCriativa2.JPG)
+![](CasaCriativa3.JPG)
+
 
 ## 🚀 Instalação e execução do node js
 
-Se você precisar de ajuda para fazer um clone, acesse esse tutorial[tutorial aqui](https://help.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+Se você precisar de ajuda para fazer um clone, acesse esse tutorial [tutorial aqui](https://help.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
 1. Abra o terminal do seu computador. Se estiver no Windows, pode ser o PowerShell. Caso use o Linux abra o terminal. 
 2. Acesse um diretorio para você realizar o clone do código.

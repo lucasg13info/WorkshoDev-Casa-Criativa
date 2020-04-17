@@ -18,5 +18,6 @@ Se você precisar de ajuda para fazer um clone, acesse esse tutorial [tutorial a
 2. Acesse um diretorio para você realizar o clone do código.
 3. Faça um clone desse repositório rodando: <br> `git clone https://github.com/lucasg13info/WorkshoDev-Casa-Criativa.git`;
 4. Rode `npm i` para instalar as dependências do projeto;
-6. Rode `npm run dev` para iniciar o servidor de desenvolvimento.
+5. Rode  `npm i nodemon` para instalar a dependencia nodemon.
+6. Rode `npm run dev` ou `npm start` para iniciar o servidor de desenvolvimento.
 7. No navegador chame "localhost:3000" para executar o servidor. 

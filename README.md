@@ -3,12 +3,12 @@
 #### Workshop ministrado pela Rocketseat durante o período de quarentena causado pelo COVID-19.
 
 ## 🚀 Imagens do sistema 
-![](CasaCriativa1.JPG)
-![](CasaCriativa2.JPG)
-![](CasaCriativa3.JPG)
 
+<p align="center">
+<img src="/img/CasaCriativa1.JPG"></img>
+<img src="/img/CasaCriativa2.JPG"></img>
 <img src="/img/CasaCriativa3.JPG"></img>
-
+</p>
 
 ## 🚀 Instalação e execução do node js
 

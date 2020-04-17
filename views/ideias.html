@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+{% extends "layout.html" %} <!--QUando você for ler a página você vai para o layout mas leva com você todo conteudo abaixo-->
+
+{% set bodyId = "page-ideias" %} <!--Criando a variavel bodyId-->
+
+
+{% block title %}
     <title>Ideias - Casa Criativa</title>
-    {%include "head.html"%}
-</head>
-<body id="page-ideias">
+{% endblock title %}
+
+
+{% block content %}
+    
     <div id="container">
         <header>
             <a href="/">
@@ -31,13 +35,4 @@
         <footer>
             Com ❤️ <a href="http://rocketseat.com.br" target="_blanck">Rocketseat</a>
         </footer>
-    </div>
-
-
-    <!--Modal-->
-    {%include "modal.html" %}
-
-    <script src="/scripts.js"></script>
-    
-</body>
-</html>
+{% endblock %}

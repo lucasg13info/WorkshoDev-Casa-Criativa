@@ -44,7 +44,7 @@ const ideas = [
         category: "Criatividade",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
         url: "https://rocketseat.com.br"
-    }
+    },
 ]
 
 //configurar arquivos estáticos (css, script, imagens)

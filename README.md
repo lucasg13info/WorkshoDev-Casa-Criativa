@@ -1,7 +1,9 @@
 # WorkshoDev-Casa-Criativa
-## Atividades para se fazer na Quarentena. Workshop ministrado pela Rocketseat
+## Atividades para se fazer na Quarentena
+## Workshop ministrado pela Rocketseat
 
 ## 🚀 Imagens do sistema 
+![](CasaCriativa1.jpg)
 <img src="CasaCriativa1.jpg"></img>
 <img src="CasaCriativa2.jpg"></img>
 <img src="CasaCriativa3.jpg"></img>

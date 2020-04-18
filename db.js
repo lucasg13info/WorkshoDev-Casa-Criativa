@@ -5,6 +5,17 @@ const db = new sqlite3.Database( './ws.db')
 
 db.serialize(function(){
     // CRIAR A TABELA
+    db.run(`
+    CREATE TABLE IF NOT EXISTS ideas(
+        id INTEGER PRIMARY KEY AUTOINCREMET,
+        image TEXT,
+        title TEXT,
+        category TEXT
+        description TEXT,
+        link TEXT
+    );
+    
+    `)
 
     //INSERIR DADOS NA TABELA
 

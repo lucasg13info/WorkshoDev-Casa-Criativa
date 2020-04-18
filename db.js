@@ -14,10 +14,32 @@ db.serialize(function(){
         description TEXT,
         link TEXT
     );
-    
     `)
 
     //INSERIR DADOS NA TABELA
+    const query = `
+    INSERT INTO ideas(
+        image,
+        title,
+        category,
+        description,
+        link
+    ) VALUES (?,?,?,?,?);
+    `
+        const values = [
+            "https://image.flaticon.com/icons/svg/2729/2729007.svg",
+            "Curso de Programação",
+            "Estudo",
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+            "https://rocketseat.com.br"
+       ]
+
+
+        db.run(query, values, function(err) {
+            if (err) return console.log(err)
+
+            console.log(this)
+        } ) /**Vai rodas as variaves definidas acima */
 
     //CONSULTAR DADOS NA TABELA
 

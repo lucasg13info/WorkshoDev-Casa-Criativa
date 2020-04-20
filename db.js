@@ -36,9 +36,7 @@ db.serialize(function(){
 
 
         db.run(query, values, function(err) {
-            if (err) return console.log(err)
-
-            console.log(this)
+            
         } ) /**Vai rodas as variaves definidas acima */
 
     //CONSULTAR DADOS NA TABELA

@@ -1,7 +1,7 @@
 <!--Estrutura de repetição dentro do HTML-->
                 {% for idea in ideas %}
                 <div class="idea">
-                    <img src="{{idea.img}}" alt="Imagem de {{idea.title}}">
+                    <img src="{{idea.image}}" alt="Imagem de {{idea.title}}">
             
                     <div class="content">
                         <h3>{{idea.title}}</h3>
@@ -9,7 +9,7 @@
 
                         <div class="description">
                             {{idea.description}}
-                            <a href="{{idea.url}}" target="_blanck"> Ir para a Ideia</a>
+                            <a href="{{idea.link}}" target="_blanck"> Ir para a Ideia</a>
                         </div>
                     </div>
                 </div>

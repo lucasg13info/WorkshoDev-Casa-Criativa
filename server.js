@@ -2,51 +2,53 @@
 const express = require("express")
 const server = express()
 
-const ideas = [
-    {
-        img:"https://image.flaticon.com/icons/svg/2729/2729007.svg",
-        title: "Curso de Programação",
-        category: "Estudo",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-        url: "https://rocketseat.com.br"
-    },
-    {
-        img:"https://image.flaticon.com/icons/svg/2729/2729005.svg",
-        title: "Exercícios",
-        category: "Saúde",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-        url: "https://rocketseat.com.br"
-    },
-    {
-        img:"https://image.flaticon.com/icons/svg/2729/2729027.svg",
-        title: "Meditação",
-        category: "Mentalidade",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-        url: "https://rocketseat.com.br"
-    },
-    {
-        img: "https://image.flaticon.com/icons/svg/2729/2729032.svg",
-        title: "Karaokê",
-        category: "Diversão",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-        url: "https://rocketseat.com.br"
-    },
-    {
-        img: "https://image.flaticon.com/icons/svg/2729/2729038.svg",
-        title: "Pintura",
-        category: "Criatividade",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-        url: "https://rocketseat.com.br"
-    },
-    {
-        img: "https://image.flaticon.com/icons/svg/2729/2729048.svg",
-        title: "Recortes",
-        category: "Criatividade",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-        url: "https://rocketseat.com.br"
-    },
-]
+const db = require("./db") //Exportando do banco de dados db.js
 
+//const ideas = [
+//   {
+//       img:"https://image.flaticon.com/icons/svg/2729/2729007.svg",
+//       title: "Curso de Programação",
+//       category: "Estudo",
+//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+//       url: "https://rocketseat.com.br"
+//   },
+//   {
+//       img:"https://image.flaticon.com/icons/svg/2729/2729005.svg",
+//       title: "Exercícios",
+//       category: "Saúde",
+//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+//       url: "https://rocketseat.com.br"
+//   },
+//   {
+//       img:"https://image.flaticon.com/icons/svg/2729/2729027.svg",
+//       title: "Meditação",
+//       category: "Mentalidade",
+//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+//       url: "https://rocketseat.com.br"
+//   },
+//   {
+//       img: "https://image.flaticon.com/icons/svg/2729/2729032.svg",
+//       title: "Karaokê",
+//       category: "Diversão",
+//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+//       url: "https://rocketseat.com.br"
+//   },
+//   {
+//       img: "https://image.flaticon.com/icons/svg/2729/2729038.svg",
+//       title: "Pintura",
+//       category: "Criatividade",
+//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+//       url: "https://rocketseat.com.br"
+//   },
+//   {
+//       img: "https://image.flaticon.com/icons/svg/2729/2729048.svg",
+//       title: "Recortes",
+//       category: "Criatividade",
+//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+//       url: "https://rocketseat.com.br"
+//   },
+//
+//
 //configurar arquivos estáticos (css, script, imagens)
 server.use(express.static("public"))
 
@@ -62,24 +64,39 @@ nunjucks.configure("views", {
 //e capturo o pedido do cliente para responder
 server.get("/", function(req, res){
 
-    //REGRA DE NEGÓCIO INDEX
-    const reversedIdeas = [...ideas].reverse() 
-    let lastIdeas = []
-    for (let idea of reversedIdeas){// .reverse  Pega o lastIdeas e inverte a forma de visualizar 
-        if (lastIdeas.length < 2 ){
-            lastIdeas.push(idea)
+    db.all(`SELECT * FROM ideas`, function(err, rows){
+        if(err) return console.log(err)
+
+        //REGRA DE NEGÓCIO INDEX
+        const reversedIdeas = [...rows].reverse() 
+        let lastIdeas = []
+        for (let idea of reversedIdeas){// .reverse  Pega o lastIdeas e inverte a forma de visualizar 
+            if (lastIdeas.length < 2 ){
+                lastIdeas.push(idea)
+            }
         }
-    }
+        
+        return res.render("index.html", { ideas: lastIdeas })  
+    })
+
+
+
     
-    return res.render("index.html", { ideas: lastIdeas })
 })
 
 
 //Regra de negócio pagina ideias
 server.get("/ideias", function(req, res){
-    const reversedIdeas = [...ideas].reverse() 
-    return res.render("ideias.html", {ideas: reversedIdeas})
+    db.all(`SELECT * FROM ideas`, function(err, rows){
+        if(err) return console.log(err)
+        
+        const reversedIdeas = [...rows].reverse() 
+        return res.render("ideias.html", {ideas: reversedIdeas})
+    })
 })
+
+
+
 
 // liguei meu servidor na porta 3000
 server.listen(3000)

@@ -35,11 +35,21 @@ db.serialize(function(){
        ]
 
 
-        db.run(query, values, function(err) {
+        //db.run(query, values, function(err) {
+        //    if (err) return console.log(err)
+       //
+        //    console.log(this)
             
-        } ) /**Vai rodas as variaves definidas acima */
+        //} ) /**Vai rodas as variaves definidas acima */
 
     //CONSULTAR DADOS NA TABELA
+
+    db.all(`SELECT * FROM ideas`, function(err, rows){
+        if (err) return console.log(err)
+
+        console.log(rows)
+
+    })
 
     // DELETAR UM DADO NA TABELA
 })

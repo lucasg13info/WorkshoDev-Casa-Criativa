@@ -34,12 +34,27 @@ db.serialize(function(){
         "https://rocketseat.com.br"
     ]
 
-    db.run(query, values, function(err) {
-        if (err) return console.log(err)
-           console.log(this)
-    })
-
-    //CONSULTAR DADOS NA TABELA
+   // db.run(query, values, function(err) {
+     //   if (err) return console.log(err)
+       //    console.log(this)
+   // })
 
     //DELETAR UM DADO NA TABELA
+    db.run(`DELETE FROM ideas WHERE id = ?`, [2], function(err) {
+        if(err) return console.log(err)
+
+        console.log("DELETEI", this)
+    })
+
+
+
+
+    //CONSULTAR DADOS NA TABELA
+    db.all(`SELECT * FROM ideas`, function(err, rows){
+        if(err) return console.log(err)
+
+        console.log(rows)
+    })
+
+    
 })

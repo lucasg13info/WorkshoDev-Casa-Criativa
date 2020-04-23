@@ -4,51 +4,7 @@ const server = express()
 
 const db = require("./db") //Exportando do banco de dados db.js
 
-//const ideas = [
-//   {
-//       img:"https://image.flaticon.com/icons/svg/2729/2729007.svg",
-//       title: "Curso de Programação",
-//       category: "Estudo",
-//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-//       url: "https://rocketseat.com.br"
-//   },
-//   {
-//       img:"https://image.flaticon.com/icons/svg/2729/2729005.svg",
-//       title: "Exercícios",
-//       category: "Saúde",
-//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-//       url: "https://rocketseat.com.br"
-//   },
-//   {
-//       img:"https://image.flaticon.com/icons/svg/2729/2729027.svg",
-//       title: "Meditação",
-//       category: "Mentalidade",
-//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-//       url: "https://rocketseat.com.br"
-//   },
-//   {
-//       img: "https://image.flaticon.com/icons/svg/2729/2729032.svg",
-//       title: "Karaokê",
-//       category: "Diversão",
-//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-//       url: "https://rocketseat.com.br"
-//   },
-//   {
-//       img: "https://image.flaticon.com/icons/svg/2729/2729038.svg",
-//       title: "Pintura",
-//       category: "Criatividade",
-//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-//       url: "https://rocketseat.com.br"
-//   },
-//   {
-//       img: "https://image.flaticon.com/icons/svg/2729/2729048.svg",
-//       title: "Recortes",
-//       category: "Criatividade",
-//       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-//       url: "https://rocketseat.com.br"
-//   },
-//
-//
+
 //configurar arquivos estáticos (css, script, imagens)
 server.use(express.static("public"))
 

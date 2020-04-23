@@ -16,3 +16,24 @@ function onOff(){
                 .classList
                 .toggle("addScroll")
 }
+
+function checkFields(event) {
+        const valuesToCheck = [
+                "title",
+                "image",
+                "category",
+                "description",
+                "link",
+        ]
+
+        const isEmpty = valuesToCheck.find(function(value){
+                const checkIfIsString = typeof event.target[value].value ==="string"
+                
+                if(checkIfIsString &&  ){
+
+                }
+        })
+        for (let value of valuesToCheck){
+                
+        }
+}

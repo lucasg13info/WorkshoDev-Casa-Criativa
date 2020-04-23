@@ -88,8 +88,11 @@ server.get("/", function(req, res){
 //Regra de negócio pagina ideias
 server.get("/ideias", function(req, res){
     db.all(`SELECT * FROM ideas`, function(err, rows){
-        if(err) return console.log(err)
-        
+        if(err){
+            console.log(err)
+            return res.send("Erro no banco de dados")
+        } 
+
         const reversedIdeas = [...rows].reverse() 
         return res.render("ideias.html", {ideas: reversedIdeas})
     })

@@ -16,29 +16,29 @@ db.serialize(function(){
     `)
 
     //INSERIR DADOS NA TABELA
-    const query = `
-        INSERT INTO ideas(
-            image,
-            title,
-            category,
-            description,
-            link
-        ) VALUES(?,?,?,?,?);
-    `
+    //const query = `
+    //    INSERT INTO ideas(
+    //       image,
+    //        title,
+    //        category,
+    //        description,
+    //        link
+    //    ) VALUES(?,?,?,?,?);
+    //`
 
-    const values = [
-        "https://image.flaticon.com/icons/svg/2729/2729007.svg",
-        "Curso de Programação",
-        "Estudo",
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
-        "https://rocketseat.com.br"
-    ]
+    //const values = [
+    //    "https://image.flaticon.com/icons/svg/2729/2729007.svg",
+    //    "Curso de Programação",
+    //    "Estudo",
+    //    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam modi voluptates fugit in iusto nam blanditiis facilis incidunt aliquam",
+    //    "https://rocketseat.com.br"
+    // ]
 
-    db.run(query, values, function(err) {
-      if (err) return console.log(err)
+    //db.run(query, values, function(err) {
+     // if (err) return console.log(err)
 
-         console.log(this)
-    })
+     //    console.log(this)
+    // })
 
    /*
     //DELETAR UM DADO NA TABELA
